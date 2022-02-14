@@ -2,6 +2,7 @@ package de.mbur.acme
 
 import mu.KotlinLogging
 import org.springframework.boot.info.BuildProperties
+import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -32,5 +33,10 @@ class DefaultController(
     }
     model.addAttribute("headers", headers)
     return "knock"
+  }
+
+  @GetMapping("/test")
+  fun testControllerAdvice() {
+    throw BadCredentialsException("just for test")
   }
 }

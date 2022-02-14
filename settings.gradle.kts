@@ -1,4 +1,4 @@
-rootProject.name = "spring-boot-kotlin-starter"
+rootProject.name = "test-ControllerAdvice"
 
 pluginManagement {
   val benManesVersionsVersion: String by settings

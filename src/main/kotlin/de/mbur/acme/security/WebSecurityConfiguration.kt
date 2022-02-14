@@ -18,6 +18,7 @@ class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
     http {
       authorizeRequests {
         authorize("/knock", permitAll)
+        authorize("/test", permitAll)
         authorize(anyRequest, authenticated)
       }
       exceptionHandling { authenticationEntryPoint = HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED) }
